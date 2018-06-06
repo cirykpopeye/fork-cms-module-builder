@@ -1,0 +1,12 @@
+{% extends 'Layout/Templates/base.html.twig' %}
+{% import "Layout/Templates/macros.html.twig" as macro %}
+
+{% block actionbar %}
+{% endblock %}
+
+{% block content %}
+    {{ form_start(form) }}
+        {{ form_rest(form) }}
+        <button type="submit">Submit</button>
+    {{ form_end(form) }}
+{% endblock %}

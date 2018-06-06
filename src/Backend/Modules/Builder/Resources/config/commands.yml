@@ -1,0 +1,50 @@
+services:
+  builder.handler.create_field:
+    class: Backend\Modules\Builder\Domain\Field\Command\CreateFieldHandler
+    public: true
+    arguments:
+        - "@builder.repository.field"
+    tags:
+        - { name: command_handler, handles: Backend\Modules\Builder\Domain\Field\Command\CreateField }
+
+  builder.handler.update_field:
+    class: Backend\Modules\Builder\Domain\Field\Command\UpdateFieldHandler
+    public: true
+    arguments:
+        - "@builder.repository.field"
+    tags:
+        - { name: command_handler, handles: Backend\Modules\Builder\Domain\Field\Command\UpdateField }
+
+
+  builder.handler.create_section:
+    class: Backend\Modules\Builder\Domain\Section\Command\CreateSectionHandler
+    public: true
+    arguments:
+        - "@builder.repository.section"
+    tags:
+        - { name: command_handler, handles: Backend\Modules\Builder\Domain\Section\Command\CreateSection }
+
+  builder.handler.update_section:
+    class: Backend\Modules\Builder\Domain\Section\Command\UpdateSectionHandler
+    public: true
+    arguments:
+        - "@builder.repository.section"
+    tags:
+        - { name: command_handler, handles: Backend\Modules\Builder\Domain\Section\Command\UpdateSection }
+
+
+  builder.handler.create_node:
+    class: Backend\Modules\Builder\Domain\Node\Command\CreateNodeHandler
+    public: true
+    arguments:
+        - "@builder.repository.node"
+    tags:
+        - { name: command_handler, handles: Backend\Modules\Builder\Domain\Node\Command\CreateNode }
+
+  builder.handler.update_node:
+    class: Backend\Modules\Builder\Domain\Node\Command\UpdateNodeHandler
+    public: true
+    arguments:
+        - "@builder.repository.node"
+    tags:
+        - { name: command_handler, handles: Backend\Modules\Builder\Domain\Node\Command\UpdateNode }

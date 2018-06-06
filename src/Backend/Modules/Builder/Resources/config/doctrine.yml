@@ -1,0 +1,37 @@
+doctrine:
+  orm:
+    mappings:
+      builder_section:
+        type: annotation
+        is_bundle: false
+        dir: "%kernel.project_dir%/src/Backend/Modules/Builder/Domain/Section"
+        alias: BuilderSection
+        prefix: Backend\Modules\Builder\Domain\Section
+
+      builder_field:
+        type: annotation
+        is_bundle: false
+        dir: "%kernel.project_dir%/src/Backend/Modules/Builder/Domain/Field"
+        alias: BuilderField
+        prefix: Backend\Modules\Builder\Domain\Field
+
+      builder_section_field:
+        type: annotation
+        is_bundle: false
+        dir: "%kernel.project_dir%/src/Backend/Modules/Builder/Domain/SectionField"
+        alias: BuilderSectionField
+        prefix: Backend\Modules\Builder\Domain\SectionField
+
+      builder_node:
+        type: annotation
+        is_bundle: false
+        dir: "%kernel.project_dir%/src/Backend/Modules/Builder/Domain/Node"
+        alias: BuilderNode
+        prefix: Backend\Modules\Builder\Domain\Node
+
+      builder_node_content:
+        type: annotation
+        is_bundle: false
+        dir: "%kernel.project_dir%/src/Backend/Modules/Builder/Domain/NodeContent"
+        alias: BuilderNodeContent
+        prefix: Backend\Modules\Builder\Domain\NodeContent

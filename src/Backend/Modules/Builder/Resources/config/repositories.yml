@@ -1,0 +1,27 @@
+services:
+    builder.repository.section:
+        class: Backend\Modules\Builder\Domain\Section\SectionRepository
+        public: true
+        factory: ["@doctrine.orm.entity_manager", getRepository]
+        arguments:
+            - Backend\Modules\Builder\Domain\Section\Section
+
+    builder.repository.field:
+        class: Backend\Modules\Builder\Domain\Field\FieldRepository
+        public: true
+        factory: ["@doctrine.orm.entity_manager", getRepository]
+        arguments:
+            - Backend\Modules\Builder\Domain\Field\Field
+
+    builder.repository.node:
+        class: Backend\Modules\Builder\Domain\Node\NodeRepository
+        public: true
+        factory: ["@doctrine.orm.entity_manager", getRepository]
+        arguments:
+            - Backend\Modules\Builder\Domain\Node\Node
+
+    builder.helper.field:
+        class: Backend\Modules\Builder\Helper\FieldHelper
+        public: true
+        arguments:
+          - '@form.factory'

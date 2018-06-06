@@ -1,0 +1,3 @@
+{% for child in context.children %}
+    {% include 'Builder/Resources/templates/node/' ~ child.key ~ '.html.twig' with { 'block': child } %}
+{% endfor %}
